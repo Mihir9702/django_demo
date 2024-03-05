@@ -1,0 +1,10 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'styles.css' %}" />
+
+<!-- <h1>The number of characters present: {{ characters }}</h1>
+
+<h1>The amount of words present: {{ words }}</h1> -->
+
+{% for post in posts%}
+<h1><a href="{% url 'post' post %}">Post</a></h1>
+{% endfor %}

@@ -1,0 +1,25 @@
+:root {
+  --background-color: #0e1111;
+  --input-background-color: #080a0a;
+}
+
+body {
+  background-color: var(--background-color);
+  color: white;
+}
+
+textarea {
+  background-color: var(--input-background-color);
+}
+
+button {
+  background-color: blue;
+  padding: 0.5rem;
+  border-radius: 20%;
+  font-style: italic;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: lightblue;
+}

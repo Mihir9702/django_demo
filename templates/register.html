@@ -1,0 +1,36 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'styles.css' %}" />
+
+<h1>Sign up</h1>
+
+<style>
+  h5 {
+    color: red;
+  }
+</style>
+
+{% for message in messages %}
+<h5>{{message}}</h5>
+{% endfor %}
+
+<form action="register" method="post">
+  {% csrf_token %}
+  <label for="username"
+    >Username:
+    <input type="text" name="username" />
+  </label>
+  <label for="email"
+    >Email:
+    <input type="email" name="email" />
+  </label>
+  <label for="password"
+    >Password:
+    <input type="password" name="password" />
+  </label>
+  <label for="password2"
+    >Re-Enter Password:
+    <input type="password" name="password2" />
+  </label>
+  <button type="submit">Submit</button>
+</form>
